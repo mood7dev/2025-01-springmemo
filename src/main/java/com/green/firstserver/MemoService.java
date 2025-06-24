@@ -1,5 +1,6 @@
 package com.green.firstserver;
 
+import com.green.firstserver.model.MemoGetOneRes;
 import com.green.firstserver.model.MemoGetRes;
 import com.green.firstserver.model.MemoPostReq;
 import lombok.RequiredArgsConstructor;
@@ -20,5 +21,9 @@ public class MemoService {
     }
     public List<MemoGetRes> selMemoList() {
         return memoMapper.selMemoList();
+    }
+
+    public MemoGetOneRes selMemo(int id) {
+        return memoMapper.selMemo(id);
     }
 }
