@@ -11,8 +11,7 @@ import java.util.List;
 @RestController//빈(Bean) 등록, 스플이 컨테이너 객체 생성을 대리로 맡긴다. 요청/응답 담당자
 @RequiredArgsConstructor
 //롬북 : final이거나 @NonNull이 붙은 필드만 포함, 생성자가 하나만  필요할 때 유용
-
-    public class MemoController {
+public class MemoController {
 
     private final MemoService memoService;
 
