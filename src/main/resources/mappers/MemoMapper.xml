@@ -19,4 +19,17 @@
         FROM memo
         WHERE id = #{id}
     </select>
+
+    <update id="updMemo">
+        UPDATE memo
+            SET title = #{title}
+                , content = #{content}
+        WHERE id = #{id}
+    </update>
+
+    <delete id="delMemo" parameterType="int">
+        DELETE FROM memo
+        WHERE id = #{id}
+    </delete>
+
 </mapper>

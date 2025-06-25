@@ -3,6 +3,7 @@ package com.green.firstserver;
 import com.green.firstserver.model.MemoGetOneRes;
 import com.green.firstserver.model.MemoGetRes;
 import com.green.firstserver.model.MemoPostReq;
+import com.green.firstserver.model.MemoPutReq;
 import org.apache.ibatis.annotations.Mapper;
 import java.util.List;
 //인터페이스가 implements한 클래스가 만들어지고 
@@ -16,6 +17,8 @@ public interface MemoMapper {
     int insMemo(MemoPostReq req);   // 메모 저장
     List<MemoGetRes> selMemoList(); // 메모 목록 조회
     MemoGetOneRes selMemo(int id);  // 단일 메모 조회
+    int updMemo(MemoPutReq putReq); // 메모 수정
+    int delMemo(int id);            // 메모 삭제
 }
 
 /*
